@@ -1,6 +1,6 @@
 FROM ibmcom/ace
 USER aceuser
-COPY /home/bandaru/Desktop/docker/bars /home/aceuser/initial-config/bars/
+COPY Application1.bar /home/aceuser/initial-config/bars/
 COPY initial-config/odbcini/* /home/aceuser/initial-config/odbcini/
 COPY initial-config/setdbparms/* /home/aceuser/initial-config/setdbparms/
 #COPY initial-config/policy/* /home/aceuser/initial-config/policy/
