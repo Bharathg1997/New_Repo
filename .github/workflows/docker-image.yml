@@ -22,5 +22,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build -t firstimage:v1 --file dockerfile . 
-    - name: Docker push
-      run: docker push ${{secrets.DOCKER_USER}}/bharathmanikanta1997/firstimage:v1
+    - name: Docker tag and Docker push
+      run: |
+        docker tag firstimage:v1 ${{secrets.DOCKER_USER}}/dockerimage:v1
+        docker push ${{secrets.DOCKER_USER}}/dockerimage:v1
