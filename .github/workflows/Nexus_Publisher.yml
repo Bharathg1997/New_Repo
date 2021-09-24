@@ -19,6 +19,7 @@ jobs:
           format: raw
           repository: devops
           filename: Application1.bar
+      - name: artifacts publishing   
         run: | 
              /home/bandaru/Music/Application1.bar
              
