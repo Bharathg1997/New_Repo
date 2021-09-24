@@ -1,4 +1,4 @@
-name: Java And Nexus Repository Publisher
+name: Java and Nexus Repository Publisher
 
 on: [push]
 
