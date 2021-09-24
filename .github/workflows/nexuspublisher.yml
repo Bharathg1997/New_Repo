@@ -27,4 +27,4 @@ jobs:
         repository: devops
         coordinates: groupId=org.apache.maven artifactId=Application1
         assets: extension=bar 
-        filename: ./Application1.bar
+        filename: .
