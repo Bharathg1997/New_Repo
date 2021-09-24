@@ -11,12 +11,9 @@ jobs:
     steps:
         
       - name: Nexus Repo Publish
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-          serverUrl: http://192.168.2.225:8081/repository/devops/
-          username: admin
-          password: ${{ secrets.NEXUS_PASSWORD }}
-      - name: artifacts publishing   
+        env:
+          NEXUS_USER: ${{ secrets.NEXUS_USER }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }} 
         run: | 
-             /home/bandaru/Music/Application1.bar
+             curl -v -u$NEXUS_USER:$NEXUS_PASSWORD /home/bandaru/Music/Application1.bar http://192.168.2.225:8081/repository/devops/
              
