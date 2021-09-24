@@ -14,6 +14,7 @@ jobs:
         env:
           NEXUS_USER: ${{ secrets.NEXUS_USER }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }} 
+          NEXUS_REPOSITORY_URL: ${{ secrets.NEXUS_REPOSITORY_URL }}
         run: | 
-             curl -v -u$NEXUS_USER:$NEXUS_PASSWORD /home/bandaru/Music/Application1.bar http://192.168.2.225:8081/repository/devops/
+             curl -v -u$NEXUS_USER:$NEXUS_PASSWORD /home/bandaru/Music/Application1.bar $NEXUS_REPOSITORY_URL
              
