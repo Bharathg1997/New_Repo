@@ -16,9 +16,6 @@ jobs:
           serverUrl: http://192.168.2.225:8081/repository/devops/
           username: admin
           password: ${{ secrets.NEXUS_PASSWORD }}
-          format: raw
-          repository: devops
-          filename: Application1.bar
       - name: artifacts publishing   
         run: | 
              /home/bandaru/Music/Application1.bar
