@@ -27,4 +27,9 @@ jobs:
         repository: devops
         coordinates: groupId=org.apache.maven artifactId=Application1
         assets: extension=bar 
-        filename: /home/bandaru/Videos/actions-runner/actions-runner/New_Repo/New_Repo/Application1.bar
+        filename: /home/bandaru/Videos/actions-runner/actions-runner/New_Repo/New_Repo/Application1.bar 
+    - name: Nexus Repo Publish
+      run: |
+           curl -v -uadmin:${{ secrets.NEXUS_PASSWORD }} --upload-file /home/bandaru/Videos/actions-runner/actions-runner/New_Repo/New_Repo/Application1.bar http://192.168.2.225:8081/repository/devops/ 
+           
+        
