@@ -23,9 +23,9 @@ jobs:
         password: ${{ secrets.NEXUS_PASSWORD }}
         format: raw
         repository: devops
-        coordinates: groupId=org.apache.maven artifactId=Application1
-        assets: extension=bar 
-        filename: /home/bandaru/Videos/actions-runner/actions-runner/New_Repo/New_Repo/Application1.bar 
+        coordinates: directory=NEW_REPO-rawrepodir
+        assets: extension=bar filename=Application1.bar
+        filename: ./Application1.bar 
     
            
            
