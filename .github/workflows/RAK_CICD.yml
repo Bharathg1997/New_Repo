@@ -1,4 +1,4 @@
-name: RAKBANK_CICD
+name: GITHUB_CICD
 
 on:
   push:
