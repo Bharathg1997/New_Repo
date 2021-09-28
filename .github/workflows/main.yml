@@ -1,4 +1,4 @@
-name: RakBank_CICD
+name: sonar
 
 on:
   push:
