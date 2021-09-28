@@ -1,4 +1,4 @@
-name: Ant Build File
+name: Build File
 
 on:
   push:
