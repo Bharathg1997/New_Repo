@@ -15,9 +15,8 @@ jobs:
         - name: Run sonarqube
           uses: kitabisa/sonarqube-action@master
           with:
-            sonar.projectKey: New_Repo
-            sonar.projectName: New_Repo
-            sonar.projectVersion: v0.0.1
-            sonar.sources: /root/Application1
-            sonar.sourceEncoding: UTF-8
+            projectBaseDir: "/root/Application1"
+            projectKey: "New_Repo"
+            projectName: "New_Repo"
+            projectVersion: "v0.0.1"
                
