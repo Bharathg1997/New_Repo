@@ -10,8 +10,5 @@ jobs:
     - uses: actions/checkout@master
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
-      with:
-        projectBaseDir: "/root"
-        projectKey: "New_Repo"
-        projectName: "New_Repo"
-        projectVersion: "v0.0.1"
+    - name: sonarscanner
+      run: sonar-scanner -Dsonar.projectKey=New_Repo -Dsonar.projectName=New_Repo -Dsonar.sources=/root/Application1 -Dsonar.sourcesEncoding=UTF-8
