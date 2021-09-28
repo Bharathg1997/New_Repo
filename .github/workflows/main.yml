@@ -22,6 +22,6 @@ jobs:
                -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
                -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
                -Dsonar.sources=/root/Application1
-               -Dsonar.projectKey=Application1
+               -Dsonar.projectKey=New_Repo
                -Dsonar.sourcesEncoding=UTF-8
                
