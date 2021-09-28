@@ -22,4 +22,6 @@ jobs:
                -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
                -Dsonar.organization=Bharath
                -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
-               -Dsonar.projectKey=sonar-scanner-action
+               -Dsonar.sources=/root/Application1
+               -Dsonar.projectKey=Bharath
+               
