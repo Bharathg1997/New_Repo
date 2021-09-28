@@ -12,11 +12,17 @@ jobs:
     runs-on: self-hosted
 
     steps: 
-        - name: Run sonarqube
-          uses: kitabisa/sonarqube-action@master
-          with:
-            projectBaseDir: "/root/Application1"
-            projectKey: "New_Repo"
-            projectName: "New_Repo"
-            projectVersion: "v0.0.1"
+          - uses: actions/checkout@master
+          - name: SonarQube Scan
+            uses: kitabisa/sonarqube-action@v1.1.0
+            with:
+             host: ${{ secrets.SONARQUBE_HOST }}
+             login: ${{ secrets.SONARQUBE_TOKEN }}
+          - name: sonarscanner   
+            uses: kitabisa/sonarqube-action@master
+            with:
+              projectBaseDir: "/root/Application1"
+              projectKey: "New_Repo"
+              projectName: "New_Repo"
+              projectVersion: "v0.0.1"
                
