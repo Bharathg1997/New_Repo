@@ -23,4 +23,5 @@ jobs:
                -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
                -Dsonar.sources=/root/Application1
                -Dsonar.projectKey=Application1
+               -Dsonar.sourcesEncoding=UTF-8
                
