@@ -19,8 +19,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Ant
-      run: ant -noinput -buildfile /root/build.xml
-      
+      run: ant -noinput -buildfile /root/build.xml   
     - uses: actions/checkout@master
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
