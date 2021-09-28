@@ -10,5 +10,8 @@ jobs:
     - uses: actions/checkout@master
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
+      with:
+        host: ${{ secrets.SONARQUBE_URL }}
+        login: ${{ secrets.SONAR_TOKEN }}
     - name: sonarscanner
-      run: sonar-scanner -Dsonar.projectKey=New_Repo -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=387ddb2cee68dd086b2bec76760d32bffe4a6402 -Dsonar.log.console=true -Dsonar.projectBaseDir=/root/Application1
+      run: sonar-scanner -Dsonar.projectKey=New_Repo -Dsonar.sources=. -Dsonar.host.url=${{ secrets.SONARQUBE_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectBaseDir=/root/Application1
