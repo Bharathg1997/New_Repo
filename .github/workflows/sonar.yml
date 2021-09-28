@@ -14,4 +14,5 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
     - name: sonarscanner
-      run: sonar-scanner -Dsonar.projectKey=New_Repo -Dsonar.sources=. -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }} -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }} -Dsonar.projectBaseDir=/root/Application1
+      run: sonar-scanner -Dsonar.projectKey=Bharath -Dsonar.projectName=Bharath -Dsonar.projectVersion=1.0 -Dsonar.sources=/root/Application1 -Dsonar.sourceEncoding=UTF-8
+         
