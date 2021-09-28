@@ -1,4 +1,4 @@
-name: Java CI
+name: RAKBANK_CICD
 
 on:
   push:
@@ -20,3 +20,17 @@ jobs:
         distribution: 'adopt'
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
+      
+    - name: SonarQube Trigger
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@master
+      with:
+        projectBaseDir: "/root"
+        projectKey: "New_Repo"
+        projectName: "New_Repo"
+        projectVersion: "v0.0.1"
+     
+     
+     
+     
