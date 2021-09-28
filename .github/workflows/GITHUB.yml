@@ -20,8 +20,13 @@ jobs:
           distribution: 'adopt'
       - name: Build with Ant
         run: ant -noinput -buildfile build.xml
-        
-      - name: SonarQube Scan
+
+      - name: java setup
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: sonarqube scan
         uses: kitabisa/sonarqube-action@master
         with:
           host: ${{ secrets.SONARQUBE_HOST }}
