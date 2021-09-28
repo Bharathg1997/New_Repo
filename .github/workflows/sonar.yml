@@ -13,6 +13,5 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
-    - name: sonarscanner
-      run: sonar-scanner -Dsonar.projectKey=/root/Application1 -Dsonar.projectName=Bharath -Dsonar.projectVersion=1.0 -Dsonar.sources=. -Dsonar.sourceEncoding=UTF-8
+    
          
