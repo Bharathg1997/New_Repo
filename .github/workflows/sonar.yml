@@ -12,7 +12,7 @@ jobs:
       uses: kitabisa/sonarqube-action@master
     - name: sonarscanner
       run: sonar-scanner
-          -Dsonar.host.url=${{ secrets.SONARQUBE_URL }}
+          -Dsonar.host.url=http://192.168.1.59:9000
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
           -Dsonar.scm.provider=git
