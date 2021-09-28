@@ -9,7 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@v1.1.0
+      uses: kitabisa/sonarqube-action@master
       with:
-        host: ${{ secrets.SONARQUBE_URL }}
-        login: ${{ secrets.SONAR_TOKEN }}
+        projectBaseDir: "/root"
+        projectKey: "New_Repo"
+        projectName: "New_Repo"
+        projectVersion: "v0.0.1"
