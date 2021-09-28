@@ -1,0 +1,25 @@
+name: RakBank_CICD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+  
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+        - name: Setup sonarqube
+          uses: warchant/setup-sonar-scanner@v3
+        - name: Run sonarqube
+          env:
+          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
+            TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
+          run: sonar-scanner
+               -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
+               -Dsonar.organization=Bharath
+               -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
+               -Dsonar.projectKey=sonar-scanner-action
