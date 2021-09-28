@@ -11,17 +11,13 @@ jobs:
   build:
     runs-on: self-hosted
 
-    steps:
-        - name: Setup sonarqube
-          uses: warchant/setup-sonar-scanner@v3
+    steps: 
         - name: Run sonarqube
-          env:
-          # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
-            TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
-          run: sonar-scanner
-               -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }}
-               -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }}
-               -Dsonar.sources=/root/Application1
-               -Dsonar.projectKey=New_Repo
-               -Dsonar.sourcesEncoding=UTF-8
+          uses: kitabisa/sonarqube-action@master
+          with:
+            sonar.projectKey: New_Repo
+            sonar.projectName: New_Repo
+            sonar.projectVersion: v0.0.1
+            sonar.sources: /root/Application1
+            sonar.sourceEncoding: UTF-8
                
