@@ -8,7 +8,7 @@
 <property name="path.ace" value="/opt/ace-11.0.0.7/server/bin" />
 <property name="base.dir" value="/root/build.xml" />
 <property name="path.store" value="/home/bandaru/Music" />
-<antcall target="Application1" />
+<antcall target="/root/Application1" />
 </target>
 <target name="Application1">
 <!-- build workspace and create BAR file -->
