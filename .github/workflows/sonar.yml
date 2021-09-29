@@ -11,11 +11,8 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
     - name: sonarscanner
-      env:
-       host: ${{ secrets.SONARQUBE_HOST }}
-       login: ${{ secrets.SONARQUBE_TOKEN }}
       run: 
-         /home/bandaru/Downloads/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }} -Dsonar.host=${{ secrets.SONARQUBE_HOST }}  -Dsonar.projectKey=New_Repo -Dsonar.projectName=New_Repo -Dsonar.projectVersion=1.0 -Dsonar.sources=/root/Application1 -Dsonar.sourceEncoding=UTF-8
+         /home/bandaru/Downloads/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -Dsonar.login=54d29529f072552853f71d4edc4461230a3e4f6a -Dsonar.host.url=http://192.168.1.59:9000 -Dsonar.projectKey=New_Repo -Dsonar.projectName=New_Repo -Dsonar.projectVersion=1.0 -Dsonar.sources=/root/Application1 -Dsonar.sourceEncoding=UTF-8
         
   
     
