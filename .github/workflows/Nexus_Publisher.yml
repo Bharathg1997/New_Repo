@@ -12,9 +12,9 @@ jobs:
         
       - name: Nexus Repo Publish
         env:
-          NEXUS_USER: ${{ secrets.NEXUS_USER }}
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }} 
           NEXUS_REPOSITORY_URL: ${{ secrets.NEXUS_REPOSITORY_URL }}
         run: | 
-             curl -v -u$NEXUS_USER:$NEXUS_PASSWORD /home/bandaru/Music/Application1.bar $NEXUS_REPOSITORY_URL
+             curl -v -u$NEXUS_USERNAME:$NEXUS_PASSWORD --upload-file /home/bandaru/Music/Application1.bar  $NEXUS_REPOSITORY_URL
              
