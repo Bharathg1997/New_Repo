@@ -13,10 +13,7 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
-        sonar.projectKey: New_Repo
-        sonar.projectName: New_Repo
-        sonar.projectVersion: 1.0
-        sonar.sources: /root/Application1
+        
         
         
   
