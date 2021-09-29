@@ -21,15 +21,23 @@ jobs:
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
       
-    - name: SonarQube_Scan
-      uses: kitabisa/sonarqube-action@master
-      with:
+  SonarQubeTrigger:
+     name: SonarQube_Scanner
+     runs-on: self-hosted
+     steps:
+     - uses: actions/checkout@master
+     - name: SonarQube_Scan
+       uses: kitabisa/sonarqube-action@master
+       with:
           host: ${{ secrets.SONARQUBE_HOST }}
           login: ${{ secrets.SONARQUBE_TOKEN }}
           projectBaseDir: "Application1"
           projectKey: "New_Repo"
           projectName: "New_Repo"
           projectVersion: "v0.0.1"
+   
+   
+    
      
      
      
