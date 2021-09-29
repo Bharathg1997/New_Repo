@@ -1,4 +1,4 @@
-name: sonarqube
+name: Sonarqube
 
 on: push
 
@@ -7,6 +7,11 @@ jobs:
     name: SonarQube Trigger
     runs-on: self-hosted
     steps:
+    - name: Setup Java JDK
+      uses: actions/setup-java@v2.3.0 
+      with:
+        java-version: '8'
+        distribution: 'adopt'
     - uses: actions/checkout@master
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@master
