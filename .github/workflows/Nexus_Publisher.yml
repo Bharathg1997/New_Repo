@@ -15,6 +15,5 @@ jobs:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }} 
           NEXUS_REPOSITORY_URL: ${{ secrets.NEXUS_REPOSITORY_URL }}
-        run: | 
-             curl -v -u$NEXUS_USERNAME:$NEXUS_PASSWORD --upload-file /home/bandaru/Music/Application1.bar  $NEXUS_REPOSITORY_URL
+        run:  curl -v -u$NEXUS_USERNAME:$NEXUS_PASSWORD --upload-file Application1.bar  $NEXUS_REPOSITORY_URL
              
