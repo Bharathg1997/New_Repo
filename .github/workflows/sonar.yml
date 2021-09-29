@@ -11,6 +11,9 @@ jobs:
     - name: SonarQube_Scan
       uses: kitabisa/sonarqube-action@master
       with:
+          host: http://192.168.1.59:9000
+          login: admin
+          passsword: admin
           projectBaseDir: "/root/Application1"
           projectKey: "New_Repo"
           projectName: "New_Repo"
