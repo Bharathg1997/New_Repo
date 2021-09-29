@@ -12,8 +12,8 @@ jobs:
       uses: kitabisa/sonarqube-action@master
       with:
           host: "http://192.168.1.59:9000"
-          login: "admin"
-          passsword: "admin"
+          sonar.login: "admin"
+          sonar.passsword: "admin"
           projectBaseDir: "Application1"
           projectKey: "New_Repo"
           projectName: "New_Repo"
