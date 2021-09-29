@@ -13,5 +13,10 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
+    - name: sonarscanner
+      run: 
+         /home/bandaru/Downloads/sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner -Dsonar.projectKey=/root/Application1 -Dsonar.projectName=New_Repo -Dsonar.projectVersion=1.0 -Dsonar.sources=. -Dsonar.sourceEncoding=UTF-8
+        
+  
     
          
