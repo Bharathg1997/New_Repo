@@ -18,5 +18,5 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-    - name: Build with ant
+    - name: Build with Ant
       run: ant -noinput -buildfile build.xml
