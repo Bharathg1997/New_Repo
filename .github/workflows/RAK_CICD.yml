@@ -35,7 +35,17 @@ jobs:
           projectKey: "New_Repo"
           projectName: "New_Repo"
           projectVersion: "v0.0.1"
-   
+          
+ Publish_artifacts:
+     name: Artifacts
+     runs-on: self-hosted
+     steps:
+       - name: Publishing_Artifacts
+         env:
+           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }} 
+           NEXUS_REPOSITORY_URL: ${{ secrets.NEXUS_REPOSITORY_URL }}
+         run:  curl -v -u$NEXUS_USERNAME:$NEXUS_PASSWORD --upload-file Application1.bar  $NEXUS_REPOSITORY_URL 
    
     
      
