@@ -36,8 +36,7 @@ jobs:
           projectName: "New_Repo"
           projectVersion: "v0.0.1"
           
- Publish_artifacts:
-     name: Artifacts
+  archive-build-artifacts:
      runs-on: self-hosted
      steps:
        - name: Publishing_Artifacts
