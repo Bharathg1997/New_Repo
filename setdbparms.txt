@@ -1,3 +1,0 @@
-# resource user password
-#setdbparms::truststore system sarasu10
-mqsisetdbparms -w /home/aceuser/ace-server -n ORACLEDB -u system -p sarasu10 
